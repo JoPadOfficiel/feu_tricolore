@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Style du feu tricolore */
+.traffic-light {
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Style des cercles lumineux */
+.light {
+    width: 80px;
+    height: 80px;
+    background: #000;
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+/* États actifs des lumières */
+.light.active.red { 
+    background: red;
+    box-shadow: 0 0 20px red;
+}
+
+.light.active.orange { 
+    background: orange;
+    box-shadow: 0 0 20px orange;
+}
+
+.light.active.green { 
+    background: lime;
+    box-shadow: 0 0 20px lime;
+}
+
+/* Style du poteau */
+.poteau {
+    width: 20px;
+    height: 100px;
+    background: #333;
+    margin: 0 auto;
+}
+
+/* Style des contrôles */
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Style du minuteur */
+#timer {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Animation de clignotement */
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+.blink {
+    animation: blink 0.5s infinite;
+}
